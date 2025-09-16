@@ -428,12 +428,4 @@ app.add_middleware(
 
 Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
-## 📞 Contato
-
-Seu Nome - [@seutwitter](https://twitter.com/seutwitter) - seuemail@email.com
-
-Link do Projeto: [https://github.com/seuusuario/weather-api](https://github.com/seuusuario/weather-api)
-
----
-
 ⭐ **Se este projeto te ajudou, deixe uma estrela!**
