@@ -348,6 +348,7 @@ weather-api/
 │   └── styles.css         # Estilos da aplicação
 ├── venv/                  # Ambiente virtual Python (não commitado)
 ├── main.py               # Código principal da API
+├── LICENSE
 ├── README.md            # Documentação do projeto
 └── requirements.txt     # Dependências do projeto
 ```
