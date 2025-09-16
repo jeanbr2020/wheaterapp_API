@@ -1,0 +1,357 @@
+/* ==========================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ==========================================
+   CONTAINER PRINCIPAL
+   ========================================== */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* ==========================================
+   CABEÇALHO
+   ========================================== */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+/* ==========================================
+   SEÇÃO DE BUSCA
+   ========================================== */
+.search-container {
+    margin-bottom: 30px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+#locationInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#locationInput:focus {
+    border-color: #74b9ff;
+}
+
+#searchBtn {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #74b9ff, #0984e3);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#searchBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(116, 185, 255, 0.3);
+}
+
+#searchBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ==========================================
+   ESTADOS DE CARREGAMENTO E ERRO
+   ========================================== */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+    color: #636e72;
+}
+
+.error {
+    background: #ff7675;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alert {
+    background: #fd79a8;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alert h4 {
+    margin-bottom: 10px;
+}
+
+/* ==========================================
+   CARDS DE CLIMA
+   ========================================== */
+.weather-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(10px);
+    opacity: 0;
+    animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   CLIMA ATUAL
+   ========================================== */
+.current-weather {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.main-info h2 {
+    color: #2d3436;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+}
+
+.main-info p {
+    color: #636e72;
+    font-size: 1.1em;
+}
+
+.temperature {
+    text-align: right;
+}
+
+.temp-large {
+    font-size: 3em;
+    font-weight: 300;
+    color: #2d3436;
+    margin: 0;
+}
+
+.temp-small {
+    color: #636e72;
+    font-size: 1.1em;
+}
+
+/* ==========================================
+   DETALHES METEOROLÓGICOS
+   ========================================== */
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.detail-item {
+    background: rgba(116, 185, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.detail-label {
+    font-size: 0.9em;
+    color: #636e72;
+    margin-bottom: 5px;
+}
+
+.detail-value {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2d3436;
+}
+
+/* ==========================================
+   SEÇÃO DE PREVISÃO
+   ========================================== */
+.forecast-section h3 {
+    color: #2d3436;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.hourly-forecast {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.hour-item {
+    min-width: 120px;
+    background: rgba(116, 185, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hour-time {
+    font-size: 0.9em;
+    color: #636e72;
+    margin-bottom: 10px;
+}
+
+.hour-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+}
+
+.hour-temp {
+    font-weight: 600;
+    color: #2d3436;
+    margin-bottom: 5px;
+}
+
+.hour-rain {
+    font-size: 0.8em;
+    color: #0984e3;
+}
+
+/* ==========================================
+   RESPONSIVIDADE - MOBILE
+   ========================================== */
+@media (max-width: 768px) {
+    .current-weather {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .temperature {
+        text-align: center;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    #locationInput, #searchBtn {
+        width: 100%;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .weather-details {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .hourly-forecast {
+        gap: 10px;
+    }
+
+    .hour-item {
+        min-width: 100px;
+        padding: 12px;
+    }
+}
+
+/* ==========================================
+   MELHORIAS DE ACESSIBILIDADE
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    .weather-card {
+        animation: none;
+    }
+
+    #searchBtn {
+        transition: none;
+    }
+}
+
+/* Melhor contraste para modo escuro do sistema */
+@media (prefers-color-scheme: dark) {
+    .container {
+        background: rgba(45, 52, 54, 0.95);
+        color: #ddd;
+    }
+
+    .main-info h2,
+    .temp-large,
+    .detail-value {
+        color: #f8f9fa;
+    }
+
+    .forecast-section h3 {
+        color: #f8f9fa;
+    }
+}
+
+/* ==========================================
+   SCROLLBAR PERSONALIZADA
+   ========================================== */
+.hourly-forecast::-webkit-scrollbar {
+    height: 8px;
+}
+
+.hourly-forecast::-webkit-scrollbar-track {
+    background: rgba(116, 185, 255, 0.1);
+    border-radius: 10px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+    background: rgba(116, 185, 255, 0.3);
+    border-radius: 10px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb:hover {
+    background: rgba(116, 185, 255, 0.5);
+}
