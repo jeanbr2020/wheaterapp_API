@@ -6,7 +6,7 @@ Uma API REST desenvolvida em **FastAPI** para consulta de informações meteorol
 
 Este projeto foi criado como exemplo prático de como integrar APIs externas usando Python, mostrando:
 
-- Integração com a [WeatherAPI](https://weatherapi.com)
+- Integração com a [WeatherAPI](https://www.weatherapi.com/)
 - Criação de API REST com FastAPI
 - Tratamento de erros e validação de dados
 - Configuração de CORS para frontend
@@ -55,7 +55,7 @@ pip install -r requirements.txt
 
 ### 4. Configure sua API Key
 
-1. Registre-se gratuitamente em [WeatherAPI.com](https://weatherapi.com)
+1. Registre-se gratuitamente em [WeatherAPI.com](https://www.weatherapi.com/)
 2. Obtenha sua API Key gratuita
 3. Substitua `"minha-api-key"` no código pela sua chave:
 
