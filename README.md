@@ -33,7 +33,7 @@ Este projeto foi criado como exemplo prático de como integrar APIs externas usa
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seuusuario/weather-api.git
+git clone https://github.com/jeanbr2020/wheaterapp_API.git
 cd weather-api
 ```
 
